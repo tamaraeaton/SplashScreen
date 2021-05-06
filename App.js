@@ -1,8 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import RNBootSplash from "react-native-bootsplash";
 
 export default function App() {
+
+  useEffect(() => {
+    RNBootSplash.hide();
+  },[])
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
